@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffe8f0">
+<title>For My Bubuu ♡</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
+:root{--pink:#ff9fbd;--hot:#ff4f91;--rose:#c94e7d;--ink:#65354a;--cream:#fff5f8;--paper:#fffdfd;--thread:#e98eac;--lav:#f3e8ff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;overflow-x:hidden;cursor:default}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.11;background-image:radial-gradient(#d66e98 .7px,transparent .7px);background-size:9px 9px}
+button{font:inherit;cursor:pointer}
+button:focus-visible{outline:3px solid #ff4f91;outline-offset:4px}
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:70px 22px 90px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 15% 20%,#ffd3e2 0,transparent 38%),radial-gradient(ellipse at 90% 75%,#f4d7ff 0,transparent 36%),linear-gradient(145deg,#fff3f7,#ffe5ee)}
+.stitch-border{position:absolute;inset:17px;border:2px dashed #e9a0bb;border-radius:30px;pointer-events:none}
+.hero-content{max-width:800px;position:relative;z-index:2}
+.eyebrow{letter-spacing:.2em;text-transform:uppercase;font-size:.72rem;color:#b45a7b;font-weight:700}
+.hero h1{font:600 clamp(3.2rem,9vw,7.2rem)/.98 'Playfair Display',serif;letter-spacing:-.05em;margin:20px 0;color:#743c59}
+.hero h1 em{font-weight:500;color:var(--hot)}
+.hero p{max-width:530px;margin:0 auto 28px;color:#96677d;line-height:1.9}
+.bow{font-size:3.2rem;display:block;margin-bottom:14px;animation:bob 2.6s ease-in-out infinite;filter:drop-shadow(0 6px 8px #ec8aaf44)}
+.primary,.soft-button{border:0;border-radius:999px;padding:14px 24px;background:linear-gradient(135deg,#ff78a5,#ec4f8a);color:white;box-shadow:0 10px 24px #e76b9a38;transition:transform .2s,box-shadow .2s;position:relative;overflow:hidden}
+.primary:hover,.soft-button:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 15px 30px #e76b9a55}
+.primary:active,.soft-button:active{transform:scale(.95)}
+.scroll-note{position:absolute;bottom:35px;left:0;right:0;color:#b77e96;font-size:.8rem}
+.float-deco{position:absolute;z-index:1;opacity:.8;animation:drift 7s ease-in-out infinite;user-select:none;pointer-events:none}
+.d1{top:13%;left:9%;font-size:2.4rem}.d2{right:10%;top:19%;font-size:2rem;animation-delay:-2s}.d3{left:12%;bottom:19%;font-size:1.8rem;animation-delay:-4s}.d4{right:12%;bottom:17%;font-size:2.6rem;animation-delay:-1s}
+.section{padding:92px 22px;max-width:1120px;margin:auto}
+.section-head{text-align:center;max-width:650px;margin:0 auto 44px}
+.kicker{font-size:.72rem;text-transform:uppercase;letter-spacing:.2em;color:#c05d84;font-weight:700}
+h2{font:600 clamp(2.3rem,5vw,3.9rem)/1.1 'Playfair Display',serif;letter-spacing:-.035em;margin:12px 0;color:#743c59}
+.section-head p{color:#986e82;line-height:1.8}
+.gallery{display:grid;grid-template-columns:1fr 1.08fr 1fr;gap:22px;align-items:center}
+.photo-card{background:var(--paper);padding:10px 10px 18px;border-radius:10px;box-shadow:0 14px 38px #9d52721a;border:1px solid #f7cbdc;transform:rotate(-3deg);transition:transform .35s,box-shadow .35s;position:relative;cursor:pointer}
+.photo-card:before{content:"";position:absolute;width:78px;height:23px;background:#ffd8e4bb;top:-10px;left:calc(50% - 39px);transform:rotate(-4deg);z-index:2;border:1px solid #ffcada}
+.photo-card:nth-child(2){transform:rotate(2deg);margin-top:22px}
+.photo-card:nth-child(3){transform:rotate(-1deg)}
+.photo-card:hover{transform:rotate(0) translateY(-8px) scale(1.025);box-shadow:0 22px 45px #9d52772a}
+.photo-card img{width:100%;height:320px;object-fit:cover;display:block;border-radius:5px}
+.photo-card:nth-child(2) img{height:380px}
+.caption{text-align:center;padding:14px 4px 0;font:italic 1.1rem 'Playfair Display',serif;color:#b04c79}
+.note{margin:28px auto 0;max-width:600px;text-align:center;color:#986e82;font-size:.92rem;line-height:1.9}
+.letter-wrap{background:radial-gradient(ellipse at 20% 30%,#ffd9e7,transparent 45%),linear-gradient(135deg,#ffeaf1,#f5e8ff);padding:88px 20px;position:relative;overflow:hidden}
+.letter-wrap:after{content:"♡  ♡  ♡  ♡  ♡";position:absolute;bottom:18px;left:0;right:0;text-align:center;letter-spacing:2.3rem;color:#e7a1bd66;font-size:1.1rem;pointer-events:none}
+.letter{max-width:750px;margin:auto;background:#fffdfb;padding:clamp(28px,6vw,62px);position:relative;box-shadow:0 22px 65px #8c4e6c20;border:1px solid #f6c9dc;border-radius:5px}
+.letter:before{content:"";position:absolute;inset:12px;border:1.5px dashed #e7a0bc;pointer-events:none}
+.letter-inner{position:relative}
+.letter-top{text-align:center;font-size:1.8rem;margin-bottom:20px}
+.letter h2{text-align:center;font-size:clamp(2rem,4vw,3.2rem);margin-bottom:28px}
+.letter p{line-height:2;color:#80566b;font-size:1rem}
+.signature{font:italic 1.55rem 'Playfair Display',serif;color:#c14e80;margin-top:25px}
+.envelope-area{text-align:center;margin-bottom:30px}
+.envelope{border:0;background:transparent;font-size:5rem;filter:drop-shadow(0 9px 9px #bd64832b);animation:bob 2.4s infinite;transition:transform .3s}
+.envelope:hover{transform:rotate(-9deg) scale(1.1)}
+.letter.hidden-letter{display:none}
+.promise-section{text-align:center}
+.promise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;margin-top:38px}
+.promise{border:1.5px dashed #e5a0bd;background:#fff9fc;border-radius:22px;padding:28px 19px;transition:transform .25s,background .25s,box-shadow .25s;cursor:pointer}
+.promise:hover{transform:translateY(-7px) rotate(-1deg);background:#fff0f6;box-shadow:0 15px 35px #d86d9b1a}
+.promise span{font-size:2rem;display:inline-block;transition:transform .25s}
+.promise:hover span{transform:scale(1.25) rotate(10deg)}
+.promise h3{font:600 1.3rem 'Playfair Display',serif;margin:13px 0 8px;color:#884662}
+.promise p{font-size:.9rem;line-height:1.8;color:#986e82;margin-bottom:0}
+.surprise{margin:35px auto 0;max-width:650px;background:#fff8fc;border:1px solid #f2c4d7;border-radius:24px;padding:28px 22px;text-align:center}
+.surprise p{color:#986e82;line-height:1.8}
+.surprise-reveal{display:none;font:italic 1.45rem 'Playfair Display',serif;color:#bd4d7e;padding-top:12px}
+.final{padding:82px 20px 100px;text-align:center;background:radial-gradient(ellipse at 50% 0,#ffe0eb,transparent 65%),#f9e8ff}
+.final .big-heart{font-size:3.6rem;animation:heartbeat 1.2s infinite;display:inline-block}
+.final h2{max-width:700px;margin:15px auto}
+.final p{color:#986e82;line-height:1.9}
+footer{text-align:center;padding:25px;color:#b07b93;font-size:.8rem;background:#fff4f8}
+.modal{display:none;position:fixed;inset:0;background:#371b2cdd;z-index:100;align-items:center;justify-content:center;padding:22px;backdrop-filter:blur(8px)}
+.modal.open{display:flex;animation:fadeIn .25s}
+.modal-box{max-width:min(850px,95vw);max-height:90vh;background:#fff7fb;padding:12px;border-radius:15px;box-shadow:0 25px 90px #0005;position:relative;animation:pop .35s}
+.modal img{display:block;max-width:100%;max-height:78vh;object-fit:contain;border-radius:8px}
+.close-modal{position:absolute;right:-12px;top:-12px;width:40px;height:40px;border:0;border-radius:50%;background:#ff6c9f;color:white;font-size:1.3rem;box-shadow:0 4px 12px #0002}
+.toast{position:fixed;z-index:90;bottom:25px;left:50%;transform:translate(-50%,20px);background:#743c59;color:white;border-radius:999px;padding:12px 19px;opacity:0;pointer-events:none;transition:.3s;box-shadow:0 10px 30px #743c5933;max-width:90vw;text-align:center;font-size:.9rem}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.click-heart{position:fixed;z-index:80;pointer-events:none;animation:heartPop .95s ease-out forwards;font-size:22px;filter:drop-shadow(0 3px 4px #a44c7222)}
+.sparkle{position:fixed;z-index:79;pointer-events:none;animation:sparkle .8s ease-out forwards;font-size:15px}
+.floating-heart{position:fixed;bottom:-30px;z-index:70;pointer-events:none;animation:rise 5s linear forwards}
+@keyframes rise{to{transform:translateY(-115vh) rotate(35deg);opacity:0}}
+@keyframes heartPop{0%{transform:translate(-50%,-50%) scale(.2) rotate(-20deg);opacity:0}25%{opacity:1;transform:translate(-50%,-70%) scale(1.35) rotate(10deg)}100%{transform:translate(calc(-50% + var(--dx)),calc(-50% - 95px)) scale(.6) rotate(35deg);opacity:0}}
+@keyframes sparkle{0%{transform:translate(-50%,-50%) scale(.2) rotate(0);opacity:0}30%{opacity:1}100%{transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(1.4) rotate(100deg);opacity:0}}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-9px) rotate(2deg)}}
+@keyframes drift{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-18px) rotate(8deg)}}
+@keyframes heartbeat{0%,100%{transform:scale(1)}15%{transform:scale(1.18)}30%{transform:scale(1)}45%{transform:scale(1.12)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes pop{from{transform:scale(.8) rotate(-2deg);opacity:0}to{transform:scale(1) rotate(0);opacity:1}}
+@media(max-width:740px){.gallery{grid-template-columns:1fr;max-width:430px;margin:auto;gap:25px}.photo-card,.photo-card:nth-child(2),.photo-card:nth-child(3){transform:rotate(0);margin:0}.photo-card img,.photo-card:nth-child(2) img{height:auto;max-height:470px;object-fit:cover}.promise-grid{grid-template-columns:1fr}.section{padding:66px 20px}.hero{min-height:94svh}.stitch-border{inset:10px}.d1{left:7%;top:10%}.d2{right:7%;top:13%}.d3{left:7%;bottom:15%}.d4{right:7%;bottom:14%}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+
+.music-player{position:fixed;right:20px;bottom:20px;z-index:60;display:flex;align-items:center;gap:12px;padding:10px 13px 10px 10px;background:#fff9fcf2;border:1px solid #f1b6ce;border-radius:999px;box-shadow:0 12px 35px #a64b7426;backdrop-filter:blur(12px);max-width:calc(100vw - 24px);transition:transform .25s,box-shadow .25s}
+.music-player:hover{transform:translateY(-3px);box-shadow:0 16px 40px #a64b7433}
+.record-wrap{width:55px;height:55px;flex:0 0 55px;display:grid;place-items:center}
+.record{width:53px;height:53px;border-radius:50%;position:relative;background:repeating-radial-gradient(circle at center,#28212a 0 2px,#38313c 2px 4px,#211c25 4px 5px);box-shadow:0 3px 7px #54223b35;display:grid;place-items:center}
+.record:after{content:"";position:absolute;inset:5px;border:1px solid #ffffff20;border-radius:50%}
+.record-label{width:21px;height:21px;background:linear-gradient(135deg,#ffb3ce,#ff6eaa);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;color:white;font-size:10px;position:relative;z-index:1;box-shadow:0 0 0 2px #ffdfeb}
+.record-label small{font-size:3px;letter-spacing:.3px;font-weight:700}
+.record.spinning{animation:spinRecord 3s linear infinite}
+.music-info{display:flex;flex-direction:column;min-width:105px;line-height:1.35}
+.music-kicker{font-size:8px;letter-spacing:1.5px;color:#c15a85;font-weight:700}
+.music-info strong{font:600 15px 'Playfair Display',serif;color:#743c59}
+.music-info small{font-size:10px;color:#a8758c}
+.music-toggle{border:0;border-radius:50%;width:38px;height:38px;flex:0 0 38px;background:linear-gradient(135deg,#ff82ad,#ec4f8a);color:white;box-shadow:0 4px 12px #e76b9a40;font-size:13px;display:grid;place-items:center;transition:transform .2s}
+.music-toggle:hover{transform:scale(1.1)}.music-toggle:active{transform:scale(.92)}
+.music-player.playing{border-color:#e98aae}
+@keyframes spinRecord{to{transform:rotate(360deg)}}
+@media(max-width:520px){.music-player{right:12px;bottom:12px;gap:8px;padding:8px 10px 8px 8px}.record-wrap{width:45px;height:45px;flex-basis:45px}.record{width:44px;height:44px}.music-info{min-width:88px}.music-info strong{font-size:13px}.music-info small{font-size:9px}.music-toggle{width:34px;height:34px;flex-basis:34px}}
+
+</style>
+</head>
+<body>
+
+<div class="music-player" id="musicPlayer" aria-label="Our song music player">
+  <div class="record-wrap" id="recordWrap">
+    <div class="record" id="record">
+      <div class="record-groove groove-one"></div><div class="record-groove groove-two"></div>
+      <div class="record-label"><span>♡</span><small>OUR SONG</small></div>
+    </div>
+  </div>
+  <div class="music-info"><span class="music-kicker">A LITTLE SOUNDTRACK</span><strong>Our Song ♡</strong><small>for you, my Bubuu</small></div>
+  <button class="music-toggle" id="musicToggle" aria-label="Play our song" title="Play / pause">▶</button>
+  <audio id="ourSong" preload="metadata" loop>
+    <source src="assets/our-song.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<header class="hero" id="top">
+  <div class="stitch-border"></div>
+  <span class="float-deco d1">💗</span><span class="float-deco d2">🧸</span><span class="float-deco d3">🎀</span><span class="float-deco d4">💕</span>
+  <div class="hero-content">
+    <span class="bow">🎀</span>
+    <div class="eyebrow">a tiny love story made just for you</div>
+    <h1>For my<br><em>sweetest Bubuu ♡</em></h1>
+    <p>For the girl who makes the miles feel smaller, my days softer, and my heart a little too full. This little corner of the internet belongs to you. 🌷</p>
+    <button class="primary" onclick="loveBurst(event);document.querySelector('#our-little-world').scrollIntoView({behavior:'smooth'})">Tap to enter our love story 💌</button>
+  </div>
+  <div class="scroll-note">♡ made with cuddles, kisses & a little bit of magic ♡</div>
+</header>
+<main>
+<section class="section" id="our-little-world">
+  <div class="section-head">
+    <div class="kicker">my favourite human</div>
+    <h2>How can one girl be this cute? 🥹</h2>
+    <p>If I could keep a thousand pictures of you in my pocket, I would. Tap any photo for a closer look. ♡</p>
+  </div>
+  <div class="gallery">
+    <article class="photo-card" tabindex="0" role="button" aria-label="Open photo" onclick="openPhoto(this)" onkeydown="if(event.key==='Enter')openPhoto(this)"><img src="assets/bubuu-photo-1.jpg" alt="My favourite girl" loading="lazy"><div class="caption">my pretty pretty girl 💗</div></article>
+    <article class="photo-card" tabindex="0" role="button" aria-label="Open photo" onclick="openPhoto(this)" onkeydown="if(event.key==='Enter')openPhoto(this)"><img src="assets/bubuu-photo-2.jpg" alt="My lovely Bubuu" loading="lazy"><div class="caption">my favourite kind of magic ✨</div></article>
+    <article class="photo-card" tabindex="0" role="button" aria-label="Open photo" onclick="openPhoto(this)" onkeydown="if(event.key==='Enter')openPhoto(this)"><img src="assets/bubuu-photo-3.jpg" alt="The face I can't wait to see" loading="lazy"><div class="caption">the face I'm travelling toward 🫶</div></article>
+  </div>
+  <p class="note">A little reminder, my love: we're not just waiting for a day on the calendar. We're getting closer to a hug, a hand to hold, and a memory we'll get to make together. 💞</p>
+</section>
+
+<section class="letter-wrap" id="love-letter">
+  <div class="envelope-area"><button class="envelope" aria-label="Open love letter" onclick="toggleLetter()">💌</button><div class="kicker">psst… tap the envelope</div></div>
+  <article class="letter hidden-letter" id="letter">
+    <div class="letter-inner">
+      <div class="tiny-label">sealed with a million kisses</div>
+      <div class="letter-top">💗 🧵 💗</div>
+      <h2>A little letter for my Bubuu</h2>
+      <p>Hey, my sweetest girl, 💕</p>
+      <p>Sometimes I still can't believe that someone who is so far away can feel so close to my heart. You're in the little things I do—in the stories I save to tell you, the songs that remind me of you, and the random moments when I catch myself smiling because of something you said.</p>
+      <p>I wish I could teleport to you on the days I miss you extra. I'd pull you into the biggest, warmest hug, hold your hand, fix your hair just to annoy you a little, and stay beside you doing absolutely nothing. Because with you, even the most ordinary things sound special.</p>
+      <p>And soon, my love, we get to turn all those “one day” dreams into a real memory. I think about that first meeting—the butterflies, the shy smiles, the moment I finally get to see you right in front of me instead of through a screen. I might be nervous, I might forget what to say, but I know I'll be so happy that you're there.</p>
+      <p>Until then, please be gentle with your heart. Distance can make a day feel long, but it doesn't make you any less precious to me. I want us to keep choosing each other with patience, honesty, laughter, and all the little efforts that make love feel safe.</p>
+      <p>If I could stitch my feelings into a tiny plushie, it would be the softest thing in the world—and it would still not be enough to hold all the love I have for you. So for now, here's this little website: a pocket-sized hug you can open whenever you need one. 🧸</p>
+      <p>Save the biggest hug for me, okay? I'm going to need a few extra seconds to make up for all the ones we missed. And maybe one little kiss too… okay, maybe more than one. 🙈💋</p>
+      <div class="signature">All my love, today and when we finally meet,<br>your person ♡</div>
+    </div>
+  </article>
+</section>
+
+<section class="section promise-section">
+  <div class="section-head">
+    <div class="kicker">our little someday list</div>
+    <h2>Things I can't wait to do with you 🌷</h2>
+    <p>Tap the little cards for a tiny love note. These are the simple things I keep imagining.</p>
+  </div>
+  <div class="promise-grid">
+    <article class="promise" onclick="showToast('One hug incoming… and I am absolutely not letting go quickly. 🫂💗')"><span>🫂</span><h3>The first real hug</h3><p>No screen, no lag, no goodbyes through a phone. Just us.</p></article>
+    <article class="promise" onclick="showToast('A cute little date, your favourite snack, and me looking at you a little too much. 🍓')"><span>🍓</span><h3>Our silly little dates</h3><p>Walks, snacks, photos, and laughing at jokes nobody else gets.</p></article>
+    <article class="promise" onclick="showToast('More memories, more pictures, more reasons to say “remember when?” ✨')"><span>📸</span><h3>Our memory collection</h3><p>Little adventures that we can remember and smile about later.</p></article>
+  </div>
+  <div class="surprise">
+    <div style="font-size:2rem">🎁</div>
+    <h3 style="font:600 1.6rem 'Playfair Display',serif;margin:10px 0">A tiny secret for you</h3>
+    <p>There's a little surprise hiding here. Go on, tap the button. 💗</p>
+    <button class="soft-button" onclick="revealSurprise()">Open your surprise 🎀</button>
+    <div class="surprise-reveal" id="surpriseReveal">If I could choose a thousand places to be, I'd still choose the one where I get to see you smile. You are my favourite “can't wait.” ♡</div>
+  </div>
+</section>
+<section class="final">
+  <div class="big-heart">💗</div>
+  <div class="kicker">one last thing, bubuu</div>
+  <h2>Until I can hold you, let this page hold a little love for you.</h2>
+  <p>Whenever the miles feel too long, come back here.<br>I'm sending you a squishy hug, forehead kisses, and all the pink hearts. 🧸💋</p>
+  <button class="primary" id="hugButton" onclick="sendHug()">Tap for unlimited virtual hugs 🫂</button>
+  <p id="hugMessage" aria-live="polite" style="margin-top:18px;min-height:24px"></p>
+  <button class="soft-button" onclick="loveBurst(event);window.scrollTo({top:0,behavior:'smooth'})">Back to the top, my love ↑</button>
+</section>
+</main>
+<footer>stitched together with ♡, pink thread, and missing you a little extra</footer>
+<div class="modal" id="photoModal" role="dialog" aria-modal="true" aria-label="Photo viewer" onclick="if(event.target===this)closePhoto()"><div class="modal-box"><button class="close-modal" onclick="closePhoto()" aria-label="Close photo">×</button><img id="modalImg" src="" alt="Expanded photo"></div></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+let toastTimer;
+function showToast(text){const t=document.getElementById('toast');t.textContent=text;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),3000);loveBurst()}
+function toggleLetter(){const l=document.getElementById('letter');l.classList.toggle('hidden-letter');if(!l.classList.contains('hidden-letter')){l.scrollIntoView({behavior:'smooth',block:'center'});showToast('A little letter, sealed with all my love 💌')}else{showToast('Letter tucked away safely, just like my heart ♡')}}
+function openPhoto(card){const img=card.querySelector('img');document.getElementById('modalImg').src=img.src;document.getElementById('photoModal').classList.add('open');document.body.style.overflow='hidden';loveBurst()}
+function closePhoto(){document.getElementById('photoModal').classList.remove('open');document.body.style.overflow=''}
+function revealSurprise(){const r=document.getElementById('surpriseReveal');r.style.display='block';r.animate([{opacity:0,transform:'translateY(12px) scale(.95)'},{opacity:1,transform:'translateY(0) scale(1)'}],{duration:500,easing:'ease-out'});showToast('Surprise unlocked! You are so loved 💗')}
+function loveBurst(e){const x=e&&e.clientX?e.clientX:window.innerWidth/2;const y=e&&e.clientY?e.clientY:window.innerHeight/2;const icons=['💗','💕','♡','💖','✨','💘','🌸'];for(let i=0;i<13;i++){const el=document.createElement('span');el.className=i%4===0?'sparkle':'click-heart';el.textContent=icons[Math.floor(Math.random()*icons.length)];el.style.left=x+'px';el.style.top=y+'px';el.style.setProperty('--dx',(Math.random()*180-90)+'px');el.style.setProperty('--dy',(Math.random()*150-80)+'px');document.body.appendChild(el);setTimeout(()=>el.remove(),1100)}}
+function sendHug(){const msgs=['Hug delivered! Hold it for as long as you need. 🫂💗','One extra-squeezy hug, with a forehead kiss. 💋','Hug number 2,847… and still not enough. 🧸💕','Imagine me holding you close and whispering “I missed you.” ♡'];document.getElementById('hugMessage').textContent=msgs[Math.floor(Math.random()*msgs.length)];loveBurst({clientX:window.innerWidth/2,clientY:window.innerHeight*.72});for(let i=0;i<22;i++){setTimeout(()=>{const h=document.createElement('span');h.className='floating-heart';h.textContent=['💗','💕','💖','♡','🌸','💘'][Math.floor(Math.random()*6)];h.style.left=Math.random()*100+'vw';h.style.fontSize=(17+Math.random()*23)+'px';h.style.animationDuration=(3+Math.random()*3)+'s';document.body.appendChild(h);setTimeout(()=>h.remove(),6500)},i*65)}}
+document.addEventListener('click',e=>{if(e.target.closest('button')||e.target.closest('.photo-card')||e.target.closest('.promise'))return; if(e.clientX||e.clientY){const el=document.createElement('span');el.className='click-heart';el.textContent=['♡','💗','✨'][Math.floor(Math.random()*3)];el.style.left=e.clientX+'px';el.style.top=e.clientY+'px';el.style.setProperty('--dx',(Math.random()*60-30)+'px');document.body.appendChild(el);setTimeout(()=>el.remove(),1000)}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closePhoto()});
+
+const song = document.getElementById('ourSong');
+const musicToggle = document.getElementById('musicToggle');
+const record = document.getElementById('record');
+const musicPlayer = document.getElementById('musicPlayer');
+musicToggle.addEventListener('click', async () => {
+  if (song.paused) {
+    try {
+      await song.play();
+      musicToggle.textContent = 'Ⅱ';
+      musicToggle.setAttribute('aria-label', 'Pause our song');
+      record.classList.add('spinning');
+      musicPlayer.classList.add('playing');
+      showToast('Our song is playing… just imagine us dancing together ♡');
+    } catch (err) {
+      showToast('Tap play once more to start our song ♡');
+    }
+  } else {
+    song.pause();
+    musicToggle.textContent = '▶';
+    musicToggle.setAttribute('aria-label', 'Play our song');
+    record.classList.remove('spinning');
+    musicPlayer.classList.remove('playing');
+    showToast('Paused… saving this little moment for later 💗');
+  }
+});
+song.addEventListener('ended', () => {
+  musicToggle.textContent = '▶';
+  record.classList.remove('spinning');
+  musicPlayer.classList.remove('playing');
+});
+
+</script>
+</body>
+</html>
